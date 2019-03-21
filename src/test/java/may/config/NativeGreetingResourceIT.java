@@ -1,4 +1,4 @@
-package may.acme.config;
+package may.config;
 
 import io.quarkus.test.junit.SubstrateTest;
 
