@@ -9,7 +9,7 @@ public interface DocumentProvider {
 
     Optional<DocumentModel> getDocumentById(Long id);
 
-    Optional<DocumentModel> getDocumentByAssignedId(String assignedId);
+    Optional<DocumentModel> getDocumentByAssignedId(Long personaId, String type, String assignedId);
 
     List<DocumentModel> getDocuments(int offset, int limit);
 

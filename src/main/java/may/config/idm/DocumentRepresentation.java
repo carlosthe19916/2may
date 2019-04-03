@@ -1,15 +1,10 @@
 package may.config.idm;
 
-import java.util.Date;
-
 public class DocumentRepresentation {
 
     private String id;
     private String type;
-    private Date issueDate;
     private String assignedId;
-    private String supplierName;
-    private String supplierAssignedId;
 
     public String getId() {
         return id;
@@ -27,14 +22,6 @@ public class DocumentRepresentation {
         this.type = type;
     }
 
-    public Date getIssueDate() {
-        return issueDate;
-    }
-
-    public void setIssueDate(Date issueDate) {
-        this.issueDate = issueDate;
-    }
-
     public String getAssignedId() {
         return assignedId;
     }
@@ -43,20 +30,5 @@ public class DocumentRepresentation {
         this.assignedId = assignedId;
     }
 
-    public String getSupplierName() {
-        return supplierName;
-    }
-
-    public void setSupplierName(String supplierName) {
-        this.supplierName = supplierName;
-    }
-
-    public String getSupplierAssignedId() {
-        return supplierAssignedId;
-    }
-
-    public void setSupplierAssignedId(String supplierAssignedId) {
-        this.supplierAssignedId = supplierAssignedId;
-    }
 }
 

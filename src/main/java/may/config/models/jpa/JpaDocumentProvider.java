@@ -21,7 +21,7 @@ public class JpaDocumentProvider implements DocumentProvider {
     }
 
     @Override
-    public Optional<DocumentModel> getDocumentByAssignedId(String assignedId) {
+    public Optional<DocumentModel> getDocumentByAssignedId(Long personaId, String type, String assignedId) {
         return Optional.empty();
     }
 

@@ -29,18 +29,26 @@ public class DocumentManager {
     DocumentIndexer documentIndexer;
 
     public DocumentModel addDocument(DocumentRepresentation representation) {
-        Document xml = xmlDocumentProvider.buildDocument(representation);
-        return addDocument(xml);
+        Document xmlDocument = xmlDocumentProvider.buildDocument(representation);
+        return addDocument(xmlDocument);
     }
 
     public DocumentModel addDocument(Document xmlDocument) {
-        addDocument1(xmlDocument);
+        // Sign document
+        xmlDocument = null;
+
+        processXmlDocument(xmlDocument);
+        return null;
+    }
+
+    public DocumentModel importDocument(Document xmlDocument) {
+        processXmlDocument(xmlDocument);
         DocumentModel document = documentProvider.addDocument(null);
 
         return document;
     }
 
-    public DocumentModel addDocument1(Document xmlDocument) {
+    private DocumentModel processXmlDocument(Document xmlDocument) {
         // Save xml in storage
         FileModel file = fileProvider.addFile(null, null);
 
@@ -60,7 +68,7 @@ public class DocumentManager {
             throw new ModelReadOnlyException("Document is read only");
         }
         Document xml = xmlDocumentProvider.buildDocument(representation);
-        addDocument1(xml);
+        processXmlDocument(xml);
         return document;
     }
 
