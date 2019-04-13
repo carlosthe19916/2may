@@ -7,19 +7,16 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "persona")
-@NamedQueries(value = {
-        @NamedQuery(name = "GetAllPersonasByFilterText", query = "select p from PersonaEntity p where lower(p.name) like :filterText")
-})
 public class PersonaEntity extends PanacheEntity {
 
-    @Column(unique = true)
+    @Column(name = "name", unique = true)
     public String name;
 
-    @Column()
+    @Column(name = "description")
     public String description;
 
     @Enumerated(EnumType.STRING)
-    @Column()
+    @Column(name = "type")
     public PersonaType type;
 
 }

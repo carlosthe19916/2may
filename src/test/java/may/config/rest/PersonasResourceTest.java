@@ -1,4 +1,4 @@
-package may.config.rest.services;
+package may.config.rest;
 
 import io.quarkus.test.junit.QuarkusTest;
 import may.config.idm.PersonaRepresentation;
